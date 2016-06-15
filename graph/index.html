@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="assets/styles/main.css" type="text/css">
+      <link rel="stylesheet" href="assets/styles/animations.css" type="text/css">
+    <title>Image Layers</title>
+  </head>
+
+  <body ng-app="iLayers">
+  <header>
+    <h1 class='logo'>
+      <a href="" title="Home">ImageLayers</a>
+    </h1>
+    <!--<nav>-->
+      <!--<ul>-->
+        <!--<li class='docker-hub'><a href="http://registry.hub.docker.com" target="_blank">Docker Hub</a></li>-->
+        <!--<li class='get-panamax'><a href="http://panamax.io/get-panamax">Get Panamax</a></li>-->
+        <!--<li class='documentation'><a href="http://panamax.io/documentation/">Documentation &amp; Support</a></li>-->
+      <!--</ul>-->
+    <!--</nav>-->
+    <!--<div id="social-icons">-->
+      <!--<a href="https://github.com/CenturyLinkLabs/panamax-ui/wiki" target="_blank" title="Fork Us on GitHub" class="github"></a>-->
+      <!--<a href="http://twitter.com/panamax_io" target="_blank" title="Follow Us on Twitter" class="twitter"></a>-->
+    <!--</div>-->
+    <cite class='logo'>
+      <a href="" title="CenturyLink">CenturyLink</a>
+    </cite>
+  </header>
+  <main ng-view>
+  </main>
+  <!--footer>
+    <div class="logo"></div>
+    <small>&copy; 2015 CenturyLink - The ImageLayers project is provided under the Apache 2.0 license. All Rights Reserved.</small>
+  </footer-->
+      <script src="app/scripts/jquery-1.11.2.min.js"></script>
+      <script src="app/scripts/angular.min.js"></script>
+      <script src="app/scripts/angular-route.min.js"></script>
+      <script src="app/scripts/angular-animate.min.js"></script>
+      <script src="app/scripts/viz.min.js"></script>
+
+      <script src="app/app.js"></script>
+      <script src="app/controllers/dashboardCtrl.js"></script>
+      <script src="app/filters/size.js"></script>
+      <script src="app/services/registryService.js"></script>
+      <script src="app/directives/search.js"></script>
+      <script src="app/directives/metrics.js"></script>
+      <script src="app/directives/digraph.js"></script>
+  </body>
+</html>

@@ -22,19 +22,20 @@ ul, li {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   min-width: 800px;
+  background: #d8d8d8;
 }
 
 /* Header and Nav*/
 header {
   width: 100%;
   overflow: hidden;
-  margin-bottom: 10px;
-  background: #8EC643;
+  background: #d8d8d8;
+  height: 60px;
+  top: 0;
 }
 
-header h1.logo {
+header .logo {
   width: 190px;
-  background: #333;
   border: none;
   padding: 0;
   margin: 0;
@@ -42,28 +43,38 @@ header h1.logo {
 }
 
 header h1.logo:hover {
-  background-color: #000;
-  transition: background-color 0.25s ease;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
-header h1.logo + button {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-
-header h1.logo a {
+header .logo a {
   overflow: hidden;
   white-space: nowrap;
   text-indent: -9999px;
   color: transparent;
-  background: url('../images/logo.png') no-repeat center center;
-  background-size: 100%;
   width: 100%;
-
   display: block;
   height: 54px;
   margin: 0 auto;
+}
+
+header h1.logo {
+  float: left;
+}
+
+header h1.logo a {
+  background: url('../images/logo_image_layers.svg') no-repeat 10px center;
+  background-size: 100%;
+}
+
+header cite.logo {
+  float: right;
+}
+
+header cite.logo a {
+  background: url("../images/ctl_logo_base.svg") 0 15px no-repeat;
+  background-size: 140px 30px;
 }
 
 header nav {
@@ -120,11 +131,80 @@ header nav ul li a:hover {
   background-image: url("../images/logo_twitter_white.svg");
 }
 
+/* Metrics */
+section.metrics {
+  width: 100%;
+  background: #2d2d2d;
+  padding: 10px 20px;
+}
+
+section.metrics li {
+  display: inline-block;
+  width: 239px;
+  height: 51px;
+  border-right: 1px solid #4b4b4b;
+}
+
+section.metrics li:last-child {
+  border-right: none;
+}
+
+section.metrics dl {
+  margin: 0;
+  padding: 5px 20px;
+}
+
+section.metrics dt {
+  color: #5f5f5f;
+  font-size: 12px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+section.metrics dd {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  line-height: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 0.075em;
+}
+
+section.metrics dd span {
+  color: #6c6c6c;
+}
+
+/* Search */
+section.search {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,.4);
+}
+
+section.search h3 {
+  display: inline-block;
+  margin-top: 18px;
+  margin-left: 40px;
+}
+
+section input[type="text"] {
+  width: 30%;
+  float: right;
+  margin-top: 10px;
+  margin-right: 40px;
+  padding: 10px;
+  font-size: 14px;
+  font-style: italic;
+}
+
 /* Graph */
 
 main {
-  padding: 10px 15px;
-  margin-bottom: 10px;
+  margin: 0;
+  height: auto;
+  min-height: 90%;
 }
 
 main h2 {
@@ -136,6 +216,24 @@ main small {
   display: block;
 }
 
+section#graph .loading {
+  width: 165px;
+  text-shadow: 1px 1px 1px white;
+  margin: 40px auto 0;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+g.graph > polygon {
+  fill: none;
+}
+
+section#graph > svg {
+  margin: 0 auto 120px;
+  display: block;
+}
+
 .layer {
   text-align: center;
   vertical-align: middle;
@@ -143,7 +241,7 @@ main small {
   background-color: #cccccc;
   font-size: .75em;
 }
-
+p
 .google-visualization-orgchart-lineleft {
   border-left-color: #8EC643;
 }
@@ -171,10 +269,25 @@ main small {
   margin-top: 3px;
 }
 
-/* Footer */
+/* Journal */
+section.journal {
+  width: 100%;
+  min-height: 100px;
+  background: #2d2d2d;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  padding: 20px;
+}
 
+/* Footer */
 footer {
   padding: 0 20px;
+  background: white;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
 }
 
 footer small {
@@ -184,7 +297,7 @@ footer small {
 }
 
 footer .logo {
-  height: 70px;
+  height: 30px;
   width: 170px;
   display: inline-block;
   background: url("../images/ctl_logo_base.svg") 0 20px no-repeat white;
